@@ -10,10 +10,66 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+body .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .main-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .main-stat .block-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 50px 5px 50px;
+  background: #c7c7c7;
+}
+
+body .main-stat .block-stat .number {
+  padding: 0;
+  margin: 0;
+}
 /*# sourceMappingURL=main.css.map */
     </style>
   </head>
   <body>
-    <h1> </h1>
+    <div class="head">
+      <div class="title">
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+      </div>
+      <div class="mode">
+        <p>Dark Mode</p>
+      </div>
+    </div>
+    <div class="main-stat">
+      <div class="block-stat">
+        <p class="social">@nathanf</p>
+        <h1 class="number">1998</h1>
+        <p class="followers">followers</p>
+        <div class="change">
+          <div class="p">12 Today</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
