@@ -2,6 +2,7 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    link(rel='styelsheet', href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap', type='text/css')
     title= "Social dashboard"
     style
       include main.css
@@ -14,31 +15,100 @@ html(lang="ru")
             p Dark Mode
 
     .main-stat
-        .block-stat
-            p.social @nathanf
+        .block-stat.facebook
+            .name-soc
+                img(src="images/icon-facebook.svg", alt="")
+                p.social @nathanf
             h1.number 1998
             p.followers followers
             .change
                 .p 12 Today
 
-        .block-stat
-            p.social @nathanf
-            h1.number 1998
+        .block-stat.twitter
+            .name-soc
+                img(src="images/icon-twitter.svg", alt="")
+                p.social @nathanf
+            h1.number 1044
             p.followers followers
             .change
-                .p 12 Today
+                .p 99 Today
 
-        .block-stat
-            p.social @nathanf
-            h1.number 1998
+        .block-stat.instagram
+            .name-soc
+                img(src="images/icon-instagram.svg", alt="")
+                p.social @nathanf
+            h1.number 11k
             p.followers followers
             .change
-                .p 12 Today
+                .p 1099 Today
                 
-        .block-stat
-            p.social @nathanf
-            h1.number 1998
-            p.followers followers
+        .block-stat.youtube
+            .name-soc
+                img(src="images/icon-youtube.svg", alt="")
+                p.social @nathanf
+            h1.number 8239
+            p.followers Subscribers
             .change
-                .p 12 Today
+                .p 144 Today
+    
+    .overview
+        h2  Overview - Today
+
+        .overview-flex
+            .overview-card
+                .overview-card-name-stat
+                    p Page Views
+                .overview-card-number
+                    p.number 87
+                    p 3%
+
+            .overview-card
+                .overview-card-name-stat
+                    p Likes
+                .overview-card-number
+                    p.number 52
+                    p 2%
+
+            .overview-card
+                .overview-card-name-stat
+                    p Likes
+                .overview-card-number
+                    p.number 5462
+                    p 2257%
+
+            .overview-card
+                .overview-card-name-stat
+                    p Page Views
+                .overview-card-number
+                    p.number 52k
+                    p 1375%
+
+        .overview-flex
+            .overview-card
+                .overview-card-name-stat
+                    p Retweets
+                .overview-card-number
+                    p.number 117
+                    p 303%
+
+            .overview-card
+                .overview-card-name-stat
+                    p Likes
+                .overview-card-number
+                    p.number 507
+                    p 553%
+
+            .overview-card
+                .overview-card-name-stat
+                    p Likes
+                .overview-card-number
+                    p.number 107
+                    p 19%
+
+            .overview-card
+                .overview-card-name-stat
+                    p Total Views
+                .overview-card-number
+                    p.number 1407
+                    p 12%
     

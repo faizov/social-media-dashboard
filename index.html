@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <link rel="styelsheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" type="text/css"/>
     <title>Social dashboard</title>
     <style>body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
   background: #f8f6f6;
   width: 1440px;
   margin-left: auto;
@@ -23,7 +26,17 @@ body .head {
           justify-content: space-between;
 }
 
+body .head h1 {
+  color: #1e202a;
+}
+
+body .head p {
+  margin: 0;
+  color: #63687e;
+}
+
 body .main-stat {
+  margin-top: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,13 +56,90 @@ body .main-stat .block-stat {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 100px 20px 100px;
-  background: #c7c7c7;
+  width: 300px;
+  padding: 20px;
+  background: #f0f2fa;
 }
 
 body .main-stat .block-stat .number {
   padding: 0;
-  margin: 0;
+  margin: 10px 0 10px 0;
+  font-size: 3rem;
+}
+
+body .main-stat .facebook {
+  border-top: 4px solid #198ff5;
+}
+
+body .main-stat .twitter {
+  border-top: 4px solid #1ca0f2;
+}
+
+body .main-stat .instagram {
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(left, #fdc468, #df4996) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996)) 1;
+     border-image: linear-gradient(left, #fdc468, #df4996) 1;
+}
+
+body .main-stat .youTube {
+  border-top: 4px solid #c4032a;
+}
+
+body .main-stat .name-soc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .main-stat .name-soc p {
+  font-weight: 700;
+  color: #63687e;
+}
+
+body .main-stat .name-soc img {
+  margin: 0 1em 0 1em;
+}
+
+body .main-stat .followers {
+  color: #63687e;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+body .overview {
+  margin-top: 4em;
+}
+
+body .overview h2 {
+  color: #63687e;
+}
+
+body .overview .overview-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px 0 50px 0;
+}
+
+body .overview .overview-flex .overview-card {
+  background: #f0f2fa;
+  width: 300px;
+  padding: 20px;
+}
+
+body .overview .overview-flex .number {
+  font-size: 2rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
     </style>
@@ -65,36 +155,123 @@ body .main-stat .block-stat .number {
       </div>
     </div>
     <div class="main-stat">
-      <div class="block-stat">
-        <p class="social">@nathanf</p>
+      <div class="block-stat facebook">
+        <div class="name-soc"><img src="images/icon-facebook.svg" alt=""/>
+          <p class="social">@nathanf</p>
+        </div>
         <h1 class="number">1998</h1>
         <p class="followers">followers</p>
         <div class="change">
           <div class="p">12 Today</div>
         </div>
       </div>
-      <div class="block-stat">
-        <p class="social">@nathanf</p>
-        <h1 class="number">1998</h1>
+      <div class="block-stat twitter">
+        <div class="name-soc"><img src="images/icon-twitter.svg" alt=""/>
+          <p class="social">@nathanf</p>
+        </div>
+        <h1 class="number">1044</h1>
         <p class="followers">followers</p>
         <div class="change">
-          <div class="p">12 Today</div>
+          <div class="p">99 Today</div>
         </div>
       </div>
-      <div class="block-stat">
-        <p class="social">@nathanf</p>
-        <h1 class="number">1998</h1>
+      <div class="block-stat instagram">
+        <div class="name-soc"><img src="images/icon-instagram.svg" alt=""/>
+          <p class="social">@nathanf</p>
+        </div>
+        <h1 class="number">11k</h1>
         <p class="followers">followers</p>
         <div class="change">
-          <div class="p">12 Today</div>
+          <div class="p">1099 Today</div>
         </div>
       </div>
-      <div class="block-stat">
-        <p class="social">@nathanf</p>
-        <h1 class="number">1998</h1>
-        <p class="followers">followers</p>
+      <div class="block-stat youtube">
+        <div class="name-soc"><img src="images/icon-youtube.svg" alt=""/>
+          <p class="social">@nathanf</p>
+        </div>
+        <h1 class="number">8239</h1>
+        <p class="followers">Subscribers</p>
         <div class="change">
-          <div class="p">12 Today</div>
+          <div class="p">144 Today</div>
+        </div>
+      </div>
+    </div>
+    <div class="overview">
+      <h2> Overview - Today</h2>
+      <div class="overview-flex">
+        <div class="overview-card">
+          <div class="overview-card-name-stat">
+            <p>Page Views</p>
+          </div>
+          <div class="overview-card-number">
+            <p class="number">87</p>
+            <p>3%</p>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card-name-stat">
+            <p>Likes</p>
+          </div>
+          <div class="overview-card-number">
+            <p class="number">52</p>
+            <p>2%</p>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card-name-stat">
+            <p>Likes</p>
+          </div>
+          <div class="overview-card-number">
+            <p class="number">5462</p>
+            <p>2257%</p>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card-name-stat">
+            <p>Page Views</p>
+          </div>
+          <div class="overview-card-number">
+            <p class="number">52k</p>
+            <p>1375%</p>
+          </div>
+        </div>
+      </div>
+      <div class="overview-flex">
+        <div class="overview-card">
+          <div class="overview-card-name-stat">
+            <p>Retweets</p>
+          </div>
+          <div class="overview-card-number">
+            <p class="number">117</p>
+            <p>303%</p>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card-name-stat">
+            <p>Likes</p>
+          </div>
+          <div class="overview-card-number">
+            <p class="number">507</p>
+            <p>553%</p>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card-name-stat">
+            <p>Likes</p>
+          </div>
+          <div class="overview-card-number">
+            <p class="number">107</p>
+            <p>19%</p>
+          </div>
+        </div>
+        <div class="overview-card">
+          <div class="overview-card-name-stat">
+            <p>Total Views</p>
+          </div>
+          <div class="overview-card-number">
+            <p class="number">1407</p>
+            <p>12%</p>
+          </div>
         </div>
       </div>
     </div>

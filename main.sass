@@ -1,4 +1,33 @@
+// Primary
+$lime-green: hsl(163, 72%, 41%)
+$bright-red: hsl(356, 69%, 56%)
+
+$facebook: hsl(208, 92%, 53%)
+$twitter: hsl(203, 89%, 53%)
+$instagram: linear-gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+$youTube: hsl(348, 97%, 39%)
+
+// Dark Theme
+$toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+
+$very-dark-blue-bg: hsl(230, 17%, 14%) // BG
+$very-dark-blue-top: hsl(232, 19%, 15%) // Top BG Pattern
+$Dark-desaturated-blue : hsl(228, 28%, 20%) // Card BG
+$desaturated-blue: hsl(228, 34%, 66%) // Text
+$white: hsl(0, 0%, 100%) // Text
+
+// Light Theme
+$toggle: hsl(230, 22%, 74%)
+
+$white: hsl(0, 0%, 100%) //BG
+$very-pale-blue: hsl(225, 100%, 98%) // Top BG Pattern
+$light-grayish-blue: hsl(227, 47%, 96%) // Card BG
+$dark-grayish-blue: hsl(228, 12%, 44%) // Text
+$very-dark-blue: hsl(230, 17%, 14%) // Text
+    
 body
+    font-family: 'Inter', sans-serif
+    font-size: 14px
     background: #f8f6f6
     width: 1440px
     margin-left: auto
@@ -9,7 +38,15 @@ body
         align-items: center
         justify-content: space-between
 
+        h1
+            color: $very-dark-blue
+
+        p
+            margin: 0
+            color: $dark-grayish-blue
+
     .main-stat
+        margin-top: 2em
         display: flex
         justify-content: space-between
 
@@ -17,9 +54,62 @@ body
             display: flex
             flex-direction: column
             align-items: center
-            padding: 20px 100px 20px 100px
-            background: #c7c7c7
+            width: 300px
+            padding: 20px
+            background: $light-grayish-blue
 
             .number
                 padding: 0
-                margin: 0
+                margin: 10px 0 10px 0
+                font-size: 3rem
+
+        .facebook
+            border-top: 4px solid $facebook
+
+            
+        .twitter
+            border-top: 4px solid $twitter
+
+        .instagram
+            border-top: 5px solid
+            border-image: linear-gradient(left, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1
+
+        .youTube
+            border-top: 4px solid $youTube
+
+        .name-soc
+            display: flex
+            align-items: center
+            justify-content: space-evenly
+
+            p
+                font-weight: 700
+                color: $dark-grayish-blue
+
+            img 
+                margin: 0 1em 0 1em
+
+        .followers
+            color: $dark-grayish-blue
+            text-transform: uppercase
+            letter-spacing: 4px
+
+    .overview
+        margin-top: 4em
+
+        h2
+            color: $dark-grayish-blue
+
+        .overview-flex
+            display: flex
+            justify-content: space-between
+            margin: 50px 0 50px 0
+
+            .overview-card
+                background: $light-grayish-blue
+                width: 300px
+                padding: 20px
+
+            .number
+                font-size: 2rem
+                font-weight: bold
