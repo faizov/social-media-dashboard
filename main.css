@@ -5,6 +5,8 @@ body {
   width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 body .head {
@@ -26,6 +28,20 @@ body .head h1 {
 body .head p {
   margin: 0;
   color: #63687e;
+}
+
+body .head h3 {
+  color: #63687e;
+  margin-right: 1em;
+}
+
+body .head .mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .main-stat {
@@ -58,6 +74,28 @@ body .main-stat .block-stat .number {
   padding: 0;
   margin: 10px 0 10px 0;
   font-size: 3rem;
+}
+
+body .main-stat .block-stat .change {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+body .main-stat .block-stat .change img {
+  margin: 0 5px 0 5px;
+}
+
+body .main-stat .block-stat .change .up {
+  color: #1db489;
+}
+
+body .main-stat .block-stat .change .down {
+  color: #dc414c;
 }
 
 body .main-stat .facebook {
@@ -104,6 +142,7 @@ body .main-stat .followers {
   color: #63687e;
   text-transform: uppercase;
   letter-spacing: 4px;
+  margin: 0 1em 2em 1em;
 }
 
 body .overview {
@@ -127,11 +166,135 @@ body .overview .overview-flex {
 body .overview .overview-flex .overview-card {
   background: #f0f2fa;
   width: 300px;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
 
 body .overview .overview-flex .number {
   font-size: 2rem;
   font-weight: bold;
+}
+
+body .overview .overview-flex .change {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+body .overview .overview-flex .change img {
+  margin: 0 5px 0 5px;
+}
+
+body .overview .overview-flex .change .up {
+  color: #1db489;
+}
+
+body .overview .overview-flex .change .down {
+  color: #dc414c;
+}
+
+body .overview .overview-flex .overview-card-name-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .overview .overview-flex .overview-card-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(left, #378fe6, #3eda82);
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dark-mode {
+  background: #1e202a;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.dark-mode .social, .dark-mode .followers, .dark-mode .mode, .dark-mode .overview-card-name-stat, .dark-mode h3.title {
+  color: #8b97c6 !important;
+}
+
+.dark-mode .title h1, .dark-mode .number {
+  color: white !important;
+}
+
+.dark-mode .block-stat, .dark-mode .overview-card {
+  background: #252a41 !important;
 }
 /*# sourceMappingURL=main.css.map */

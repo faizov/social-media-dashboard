@@ -12,7 +12,14 @@ html(lang="ru")
             h1 Social Media Dashboard
             p Total Followers: 23,004
         .mode
-            p Dark Mode
+            h3 Dark Mode
+            label.switch 
+                input(
+                    type='checkbox'
+                    name='mode'
+                    onClick='myFunction()'
+                )
+                span.slider.round
 
     .main-stat
         .block-stat.facebook
@@ -22,7 +29,8 @@ html(lang="ru")
             h1.number 1998
             p.followers followers
             .change
-                .p 12 Today
+                img(src="images/icon-up.svg", alt="") 
+                .p.up 12 Today
 
         .block-stat.twitter
             .name-soc
@@ -31,7 +39,8 @@ html(lang="ru")
             h1.number 1044
             p.followers followers
             .change
-                .p 99 Today
+                img(src="images/icon-up.svg", alt="") 
+                .p.up 99 Today
 
         .block-stat.instagram
             .name-soc
@@ -40,7 +49,8 @@ html(lang="ru")
             h1.number 11k
             p.followers followers
             .change
-                .p 1099 Today
+                img(src="images/icon-up.svg", alt="") 
+                .p.up 1099 Today
                 
         .block-stat.youtube
             .name-soc
@@ -49,7 +59,8 @@ html(lang="ru")
             h1.number 8239
             p.followers Subscribers
             .change
-                .p 144 Today
+                img(src="images/icon-down.svg", alt="") 
+                .p.down 144 Today
     
     .overview
         h2  Overview - Today
@@ -58,57 +69,86 @@ html(lang="ru")
             .overview-card
                 .overview-card-name-stat
                     p Page Views
+                    img(src="/images/icon-facebook.svg", alt="", srcset="")
                 .overview-card-number
                     p.number 87
-                    p 3%
+                    .change
+                        img(src="images/icon-up.svg", alt="") 
+                        .p.up 3%
 
             .overview-card
                 .overview-card-name-stat
                     p Likes
+                    img(src="/images/icon-facebook.svg", alt="", srcset="")
                 .overview-card-number
                     p.number 52
-                    p 2%
+                    .change
+                        img(src="images/icon-down.svg", alt="") 
+                        .p.down 2%
 
             .overview-card
                 .overview-card-name-stat
                     p Likes
+                    img(src="/images/icon-instagram.svg", alt="", srcset="")
                 .overview-card-number
                     p.number 5462
-                    p 2257%
+                    .change
+                        img(src="images/icon-up.svg", alt="") 
+                        .p.up 2257%
 
             .overview-card
                 .overview-card-name-stat
                     p Page Views
+                    img(src="/images/icon-instagram.svg", alt="", srcset="")
                 .overview-card-number
                     p.number 52k
-                    p 1375%
+                    .change
+                        img(src="images/icon-up.svg", alt="") 
+                        .p.up 1375%
 
         .overview-flex
             .overview-card
                 .overview-card-name-stat
                     p Retweets
+                    img(src="/images/icon-twitter.svg", alt="", srcset="")
                 .overview-card-number
                     p.number 117
-                    p 303%
+                    .change
+                        img(src="images/icon-up.svg", alt="") 
+                        .p.up 303%
 
             .overview-card
                 .overview-card-name-stat
                     p Likes
+                    img(src="/images/icon-twitter.svg", alt="", srcset="")
                 .overview-card-number
                     p.number 507
-                    p 553%
+                    .change
+                        img(src="images/icon-up.svg", alt="") 
+                        .p.up 553%
 
             .overview-card
                 .overview-card-name-stat
                     p Likes
+                    img(src="/images/icon-youtube.svg", alt="", srcset="")
                 .overview-card-number
                     p.number 107
-                    p 19%
+                    .change
+                        img(src="images/icon-down.svg", alt="") 
+                        .p.down 19%
 
             .overview-card
                 .overview-card-name-stat
                     p Total Views
+                    img(src="/images/icon-youtube.svg", alt="", srcset="")
                 .overview-card-number
                     p.number 1407
-                    p 12%
+                    .change
+                        img(src="images/icon-down.svg", alt="") 
+                        .p.down 12%
     
+script.
+    function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    }

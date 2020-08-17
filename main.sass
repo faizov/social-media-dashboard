@@ -8,18 +8,19 @@ $instagram: linear-gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
 $youTube: hsl(348, 97%, 39%)
 
 // Dark Theme
-$toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+$toggle-dark: linear-gradient(left, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) 1
+
 
 $very-dark-blue-bg: hsl(230, 17%, 14%) // BG
 $very-dark-blue-top: hsl(232, 19%, 15%) // Top BG Pattern
-$Dark-desaturated-blue : hsl(228, 28%, 20%) // Card BG
+$dark-desaturated-blue: hsl(228, 28%, 20%) // Card BG
 $desaturated-blue: hsl(228, 34%, 66%) // Text
 $white: hsl(0, 0%, 100%) // Text
 
 // Light Theme
 $toggle: hsl(230, 22%, 74%)
 
-$white: hsl(0, 0%, 100%) //BG
+$whiteBg: hsl(0, 0%, 100%) //BG
 $very-pale-blue: hsl(225, 100%, 98%) // Top BG Pattern
 $light-grayish-blue: hsl(227, 47%, 96%) // Card BG
 $dark-grayish-blue: hsl(228, 12%, 44%) // Text
@@ -32,6 +33,7 @@ body
     width: 1440px
     margin-left: auto
     margin-right: auto
+    transition: .3s
 
     .head 
         display: flex
@@ -44,6 +46,15 @@ body
         p
             margin: 0
             color: $dark-grayish-blue
+
+        h3
+            color: $dark-grayish-blue
+            margin-right: 1em
+
+        .mode
+            display: flex
+            align-items: center
+            
 
     .main-stat
         margin-top: 2em
@@ -62,6 +73,20 @@ body
                 padding: 0
                 margin: 10px 0 10px 0
                 font-size: 3rem
+
+            .change
+                display: flex
+                align-items: center
+                font-weight: 600
+
+                img
+                    margin: 0 5px 0 5px
+
+                .up
+                    color: $lime-green
+
+                .down
+                    color: $bright-red
 
         .facebook
             border-top: 4px solid $facebook
@@ -93,6 +118,7 @@ body
             color: $dark-grayish-blue
             text-transform: uppercase
             letter-spacing: 4px
+            margin: 0 1em 2em 1em
 
     .overview
         margin-top: 4em
@@ -108,8 +134,105 @@ body
             .overview-card
                 background: $light-grayish-blue
                 width: 300px
-                padding: 20px
+                padding: 20px 20px 0 20px
 
             .number
                 font-size: 2rem
                 font-weight: bold
+            
+            .change
+                display: flex
+                align-items: center
+                font-weight: 600
+
+                img
+                    margin: 0 5px 0 5px
+
+                .up
+                    color: $lime-green
+
+                .down
+                    color: $bright-red
+
+            .overview-card-name-stat
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+            .overview-card-number
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+
+.switch 
+    position: relative
+    display: inline-block
+    width: 60px
+    height: 34px
+
+    input 
+        opacity: 0
+        width: 0
+        height: 0
+
+.slider 
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #ccc
+  -webkit-transition: .4s
+  transition: .4s
+
+
+.slider:before 
+  position: absolute
+  content: ""
+  height: 26px
+  width: 26px
+  left: 4px
+  bottom: 4px
+  background-color: white
+  -webkit-transition: .4s
+  transition: .4s
+
+
+input:checked + .slider 
+  background: linear-gradient(left, hsl(210, 78%, 56%), hsl(146, 68%, 55%))
+
+
+input:focus + .slider 
+  box-shadow: 0 0 1px #2196F3
+
+
+input:checked + .slider:before 
+  -webkit-transform: translateX(26px)
+  -ms-transform: translateX(26px)
+  transform: translateX(26px)
+
+.slider.round 
+  border-radius: 34px
+
+
+.slider.round:before 
+  border-radius: 50%
+
+
+// Dark mode
+
+.dark-mode
+    background: $very-dark-blue-bg
+    transition: .3s
+
+    .social, .followers, .mode, .overview-card-name-stat, h3.title 
+        color: $desaturated-blue !important
+
+    .title h1, .number
+        color: $white !important
+
+
+    .block-stat, .overview-card
+        background: $dark-desaturated-blue !important
