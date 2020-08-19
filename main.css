@@ -9,6 +9,14 @@ body {
   transition: .3s;
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 body .head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,6 +27,13 @@ body .head {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  body .head {
+    display: block;
+    padding: 1em;
+  }
 }
 
 body .head h1 {
@@ -44,6 +59,17 @@ body .head .mode {
           align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  body .head .mode {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 2em;
+    border-top: 1px solid #000;
+    padding-top: 1em;
+  }
+}
+
 body .main-stat {
   margin-top: 2em;
   display: -webkit-box;
@@ -52,6 +78,13 @@ body .main-stat {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  body .main-stat {
+    display: block;
+    padding: 0 1em 1em 1em;
+  }
 }
 
 body .main-stat .block-stat {
@@ -71,6 +104,13 @@ body .main-stat .block-stat {
   width: 300px;
   padding: 20px;
   background: #f0f2fa;
+}
+
+@media screen and (max-width: 500px) {
+  body .main-stat .block-stat {
+    width: auto;
+    margin-top: 1em;
+  }
 }
 
 body .main-stat .block-stat:hover {
@@ -156,8 +196,20 @@ body .overview {
   margin-top: 4em;
 }
 
+@media screen and (max-width: 500px) {
+  body .overview {
+    margin-top: 2em;
+  }
+}
+
 body .overview h2 {
   color: #63687e;
+}
+
+@media screen and (max-width: 500px) {
+  body .overview h2 {
+    padding: 0 1em 0 1em;
+  }
 }
 
 body .overview .overview-flex {
@@ -170,6 +222,14 @@ body .overview .overview-flex {
   margin: 50px 0 50px 0;
 }
 
+@media screen and (max-width: 500px) {
+  body .overview .overview-flex {
+    display: block;
+    padding: 0 1em 0 1em;
+    margin: 0;
+  }
+}
+
 body .overview .overview-flex .overview-card {
   -webkit-transition: .3s;
   transition: .3s;
@@ -177,6 +237,12 @@ body .overview .overview-flex .overview-card {
   background: #f0f2fa;
   width: 300px;
   padding: 20px 20px 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  body .overview .overview-flex .overview-card {
+    margin-top: 1em;
+  }
 }
 
 body .overview .overview-flex .overview-card:hover {
@@ -284,6 +350,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   transform: translateX(26px);
+  background-color: #252a41;
 }
 
 .slider.round {
@@ -304,7 +371,7 @@ input:checked + .slider:before {
   color: #8b97c6 !important;
 }
 
-.dark-mode .title h1, .dark-mode .number {
+.dark-mode .title h1, .dark-mode .number, .dark-mode .overview h2 {
   color: white !important;
 }
 
@@ -314,5 +381,19 @@ input:checked + .slider:before {
 
 .dark-mode .block-stat:hover, .dark-mode .overview-card:hover {
   background: #3b4261 !important;
+}
+
+.dark-mode .attribution, .dark-mode .attribution a {
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .attribution {
+    padding: 1em;
+  }
+}
+
+.attribution a {
+  color: #1e202a;
 }
 /*# sourceMappingURL=main.css.map */
